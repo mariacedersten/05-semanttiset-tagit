@@ -1,0 +1,70 @@
+/* Mobile-first! */
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 1rem;
+  font-size: 2rem;
+}
+header,
+nav,
+section,
+article,
+aside,
+footer {
+  padding: 1rem;
+  color: white;
+}
+header {
+  background-color: red;
+}
+nav {
+  background-color: orange;
+}
+section {
+  background-color: goldenrod;
+}
+section p {
+  margin-block-end: 1rem;
+}
+article {
+  background-color: forestgreen;
+
+  margin-block-end: 1rem;
+}
+aside {
+  background-color: darkslateblue;
+}
+footer {
+  background-color: darkmagenta;
+}
+
+/* Käytetään flexiä section- ja aside-elementtien saamiseksi rinnakkain */
+/* Sääntö vanhempaan */
+.lapset-rinnakkain {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+/* Sääntö ko. vanhemman lapsille */
+.lapset-rinnakkain > * {
+  flex-basis: 100%;
+  flex-grow: 1;
+}
+/* Mobiili-näkymässä nämäkin lapset alllekkain */
+.lapset-rinnakkain .tama-rinnakkain {
+  flex-basis: 100%;
+}
+/* Säännööt mobiilia suuremmille näytöille */
+@media only screen and (min-width: 426px) {
+  /*
+  body {
+    background-color: lightblue;
+  } */
+  /* isolla näytöllä nämä lapset rinnakkain */
+  .lapset-rinnakkain .tama-rinnakkain {
+    flex-basis: 0;
+  }
+}
