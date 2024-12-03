@@ -57,7 +57,7 @@ footer {
 .lapset-rinnakkain .tama-rinnakkain {
   flex-basis: 100%;
 }
-/* Säännööt mobiilia suuremmille näytöille */
+/* Säännöt mobiilia suuremmille näytöille */
 @media only screen and (min-width: 426px) {
   /*
   body {
